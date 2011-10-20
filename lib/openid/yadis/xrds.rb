@@ -94,7 +94,7 @@ module OpenID
 
       begin
         d = REXML::Document.new(text)
-      rescue RuntimeError, ArgumentError => why
+      rescue
         raise XRDSError.new("Not an XRDS document. Failed to parse XML.")
       end
 
